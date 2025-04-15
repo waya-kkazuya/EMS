@@ -142,11 +142,6 @@ jobs:
           name: coverage-html-report
           path: coverage
 
-      # - name: Run Tests
-      #   run: |
-      #     php artisan config:clear
-      #     php artisan test --testsuite=Feature || exit 0
-
       - name: view laravel.log
         if: failure()
         run: cat storage/logs/laravel-$(date +'%Y-%m-%d').log
